@@ -1,0 +1,14 @@
+{
+  "name": "personal-spend",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "cli",
+    "web"
+  ],
+  "scripts": {
+    "ingest": "npm run ingest --workspace cli --",
+    "web": "npm run dev --workspace web",
+    "build": "npm run build --workspace web"
+  }
+}

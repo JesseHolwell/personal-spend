@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.DS_Store
+
+# local raw exports (sensitive)
+Data_export_*.csv
+data/raw/*.csv
+
+# generated outputs
+data/processed/*.json
+web/public/sankey.json
+web/public/uncategorized.json
+web/public/transactions.json

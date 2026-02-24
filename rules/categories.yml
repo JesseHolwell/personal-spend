@@ -1,0 +1,71 @@
+# Keyword-based leaf categories (case-insensitive substring matching)
+# Then grouped into parent layers via `groups` and optional `group_rules`.
+rules:
+  Groceries:
+    - coles
+    - woolworths
+    - aldi
+  Dining:
+    - uber *eats
+    - mcdonalds
+  Transport:
+    - bp
+    - uber
+  Shopping:
+    - amazon
+    - airbnb
+    - steam
+  Insurance:
+    - ahm health
+  Memberships:
+    - racv
+    - one membership
+  Subscriptions:
+    - spotify
+    - cursor
+    - netflix
+  Utilities:
+    - telstra
+    - optus
+    - vodafone
+  Transfers:
+    - tfr
+    - osko payment
+    - payment by authority
+  Income:
+    - deposit
+    - salary
+
+groups:
+  Food:
+    - Dining
+    - Groceries
+  Recurring Payments:
+    - Memberships
+    - Insurance
+    - Subscriptions
+    - Utilities
+    - Interest
+  Lifestyle:
+    - Shopping
+  Mobility:
+    - Transport
+  Transfers:
+    - Transfers
+  Income:
+    - Income
+
+# Optional direct group keywords. These can override default group mapping.
+group_rules:
+  Food:
+    - uber *eats
+    - coles
+    - woolworths
+    - mcdonalds
+  Recurring Payments:
+    - spotify
+    - insurance
+    - membership
+    - telstra
+    - optus
+    - cursor
